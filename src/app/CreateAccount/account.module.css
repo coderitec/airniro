@@ -1,0 +1,20 @@
+.formUl{
+    display: flex;
+    flex-direction: column;
+}
+
+.formUl label{
+    display: block;
+}
+
+.formUl input{
+    outline: none;
+    border: 2px solid #cac6c6;
+    width: 100%;
+    border-radius: 3px;
+    padding: 5px 0.5px;
+}
+
+.formUl li{
+    margin-bottom: 20px;
+}
