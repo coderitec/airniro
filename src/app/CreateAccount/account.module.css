@@ -5,6 +5,7 @@
 
 .formUl label{
     display: block;
+    margin-bottom: 0.45rem;
 }
 
 .formUl input{
@@ -12,7 +13,7 @@
     border: 2px solid #cac6c6;
     width: 100%;
     border-radius: 3px;
-    padding: 5px 0.5px;
+    padding: 5px;
 }
 
 .formUl li{

@@ -37,11 +37,11 @@ export default function Home() {
         <li>deposit</li>
         </Link>
 
-        <Link href='/Signup'>
+        <Link href='/Register'>
         <li>sign up</li>
         </Link>
 
-        <Link href='/Login'>
+        <Link href='/Register'>
         <li>log in</li>
         </Link>
       </ul>
