@@ -1,7 +1,7 @@
 import './globals.css'
-import { Poppins } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['400']})
+const poppins = Montserrat({ subsets: ['latin'], weight: ['400']})
 
 export const metadata = {
   title: 'Welcome to Airniro',
