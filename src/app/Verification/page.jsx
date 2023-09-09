@@ -1,11 +1,10 @@
 "use client"
 import React, { useRef, useState } from 'react';
 import FormHeaders from '../components/FormHeaders'
-import { useRouter } from 'next/navigation';
 import AccountButton from '../components/AccountButton';
 import CancelButton from '../components/CancelButton';
 
-export default function page() {
+export default function Page() {
 
   const text_color = '[#4b4b4bb6]';
   const ph_color = '[#afa9a9b6]';
