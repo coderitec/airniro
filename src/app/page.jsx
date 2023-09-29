@@ -6,7 +6,7 @@ export default function Home() {
     <main>
       <ul className={styles.homeUl}>
 
-        <Link href='/'>
+        <Link href='/HomePage'>
         <li>Home</li>
         </Link>
         <Link href='/CreateAccount'>
