@@ -18,7 +18,7 @@ export default function page() {
 
         </div>
 
-        <main id='container' className='h-[500px] w-[100vw] grid grid-cols-4 gap-[20px] my-[3rem]'>
+        <main id='container' className='h-[auto] w-[100vw] grid grid-cols-4 gap-[20px] my-[3rem]'>
             <section id='left-col' className=''>
                 
                 <div className='min-h-[300px] h-[auto] w-[270px] rounded-xl mx-[auto] bg-[white] relative'>
@@ -53,7 +53,7 @@ export default function page() {
                     </div>
 
 
-                    
+
                     <div className='h-[auto] w-[100%] text-[#00132E] flex flex-col items-center px-4 text-[14px]'>
                         <PopularEventItem text={"Hot Bet"}/>
                         <PopularEventItem text={"Headies Award"}/>
@@ -64,6 +64,11 @@ export default function page() {
                     </div>
                     
 
+                </div>
+
+                <div className='h-[auto] w-[auto] flex flex-col items-center justify-around'>
+                    <AdvertBoard/>
+                    <AdvertBoard/>
                 </div>
             </section>
         </main>
