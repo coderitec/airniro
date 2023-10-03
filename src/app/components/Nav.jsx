@@ -58,7 +58,7 @@ export default function Nav() {
 
 
     </nav>
-        <div className='absolute h-[70px] w-[100vw] bg-[#0166E5] flex items-center text-[white] p-1 px-6 text-[13px]'>
+        <div className={isActive ? `absolute h-[70px] w-[100vw] bg-[#0166E5] flex items-center text-[white] p-1 px-6 text-[13px]` : `hidden`}>
         {navLinks.map((e) => (isActive == e.link ? e.nestedLink.map((e) => (
             <a href='#' className='mx-5' key={e}>
                 <p>{e}</p>

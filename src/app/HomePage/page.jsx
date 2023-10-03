@@ -2,6 +2,8 @@ import React from 'react'
 import Nav from '../components/Nav'
 import PopularEventItem from '../components/PopularEventItem'
 import AdvertBoard from '../components/AdvertBoard'
+import BetSlip from '../BetSlip/page'
+import BetMain from '../BetMain/page'
 
 export default function page() {
   return (
@@ -18,10 +20,10 @@ export default function page() {
 
         </div>
 
-        <main id='container' className='h-[auto] w-[100vw] grid grid-cols-4 gap-[20px] my-[3rem]'>
+        <main id='container' className='h-[auto] w-[100vw] grid grid-cols-betgrid_main gap-[0] my-[3rem]'>
             <section id='left-col' className=''>
                 
-                <div className='min-h-[300px] h-[auto] w-[270px] rounded-xl mx-[auto] bg-[white] relative'>
+                <div className='min-h-[300px] h-[auto] w-[220px] rounded-xl mx-[auto] bg-[white] relative'>
                     <div className='h-[60px] w-[100%] rounded-t-xl bg-[#00132E] text-[white] flex items-center px-4'>
                         Popular Event
                     </div>
@@ -39,34 +41,33 @@ export default function page() {
             </section>
 
 
-            <section id='center-col' className='col-span-2'>
-                <div className='h-[220px] w-[600px] bg-[white] rounded-2xl mx-auto flex items-center justify-around'>
+            <section id='center-col' className=''>
+                <div className='h-[300px] w-[100%] bg-[white] rounded-2xl mx-auto flex items-center justify-around'>
                     <AdvertBoard/>
                     <AdvertBoard/>
                 </div>
+
+
+                <div className=''>
+                    <BetMain title={"Sport"} subtitle={"International Clubs Club Friendly Games"} navlist={["Football", "Volley Ball", "Basket Ball", "Tennis", "Long Tennis", "Cricket", "Boxing"]} currentDate={"Tue 22 Aug"}/>
+                    <BetMain title={"Entertainment"} subtitle={"Headies Awards 2023"} navlist={["Headies Awards", "AMVCA Award", "Tennis", "Long Tennis", "Cricket", "Boxing"]} currentDate={"Tue 22 Aug"}/>
+                </div>
+
             </section>
+
+
+
+
+
             <section id='right-col' className=''>
 
-            <div className='min-h-[300px] h-[auto] w-[270px] rounded-xl mx-[auto] bg-[white] relative'>
-                    <div className='h-[60px] w-[100%] rounded-t-xl bg-[#00132E] text-[white] flex items-center px-4'>
-                        Bet Slip
-                    </div>
-
-
-
-                    <div className='h-[auto] w-[100%] text-[#00132E] flex flex-col items-center px-4 text-[14px]'>
-                        <PopularEventItem text={"Hot Bet"}/>
-                        <PopularEventItem text={"Headies Award"}/>
-                        <PopularEventItem text={"Big Brother Nigeria"}/>
-                        <PopularEventItem text={"Nigeria Presidential Election"}/>
-                        <PopularEventItem text={"MTV Base Award"}/>
-                        <PopularEventItem text={"Nigeria Idol"}/>
-                    </div>
-                    
-
+                <div>
+                    {/* <BetSlip/> */}
                 </div>
 
-                <div className='h-[auto] w-[auto] flex flex-col items-center justify-around'>
+
+
+                <div className='h-[auto] w-[220px] flex flex-col items-center justify- mx-[auto]'>
                     <AdvertBoard/>
                     <AdvertBoard/>
                 </div>

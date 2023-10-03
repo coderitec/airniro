@@ -1,0 +1,36 @@
+.betSelect,
+.active {
+    height: 40px;
+    min-width: 80px;
+    width: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+    background-color: #0166E5;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 350ms ease-in-out;
+    cursor: pointer;
+
+}
+
+.active{
+    background-color: #FFC717;
+}
+.betSelect:first-child{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-right: 1.5px;
+}
+.betSelect:last-child{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-left: 1.5px;
+}
+.betSelect:hover{
+    background-color: #55617695;
+    transition: all 350ms ease-in-out;
+}
