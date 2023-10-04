@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import styles from '../styles/betmain.module.css'
 
 
-export default function SelectBet(props) {
+export default function SelectSportBet(props) {
 
     const sportOptionArray = ["Win","Draw", "Loss"]
 
@@ -27,7 +27,24 @@ export default function SelectBet(props) {
 
 
   return (
-    <section id='bet_main' className='h-[50px] w-[100%] items-center justify-center grid  grid-cols-betgrid_2'>
+    <section id='bet_main' className='h-[80px] w-[100%] flex flex-col items-center justify-center bg-[green]'>
+        <div>
+            {/* props title  */}
+            <p className='text-[13px]'>{`Best Album of the year 2023 (Tueday 22 August, 2023)`}</p>
+        </div>
+
+        <div>
+            {/* props title  */}
+            <p className='text-[13px]'>{`Adebola James Bet Wiskid Albu \‘Made in Lagos\’ to Win the best Album of the year at the Headies awrad 2023 With N20,000`}</p>
+        </div> 
+
+        <div>
+            {/* props title  */}
+            <p className='text-[13px]'>{`Best Album of the year 2023 (Tueday 22 August, 2023)`}</p>
+        </div>
+        
+        
+        
         <div className='h-[50px] min-w-[100px] w-[auto]  items-center justify-around grid grid-cols-betgrid_3 text-right gap-1'>
             {/* club name  */}
             <p>{ props.club ? props.club :`Chelsea`}</p>
