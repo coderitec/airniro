@@ -5,7 +5,7 @@ import AdvertBoard from '../components/AdvertBoard'
 import BetSlip from '../BetSlip/page'
 import BetMain from '../BetMain/page'
 
-export default function page() {
+export default function HomePage() {
   return (
     <section className='relative bg-[#F3F3F3]'>
         <Nav/>
