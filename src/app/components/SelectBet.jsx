@@ -40,7 +40,7 @@ export default function SelectBet(props) {
 
         <div className='flex items-center justify-center h-[50px] min-w-[300px] w-[auto] p-2 txet-[13px] '>
         {sportOptionArray.map((names) => (  /* add actual betting option list or arrays here*/               
-        <span className={names != isActive ? styles.betSelect : styles.active} onClick={()=> handlebetSelection(names) && setActive(names)}>
+        <span key={Math.random()} className={names != isActive ? styles.betSelect : styles.active} onClick={()=> handlebetSelection(names) && setActive(names)}>
             {names}
         </span>
         ))} 
