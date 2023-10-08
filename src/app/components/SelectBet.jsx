@@ -18,10 +18,12 @@ export default function SelectBet(props) {
     )
 
     const handlebetSelection = (e) => {
-            e == "Loss"? setBet("Lose"):setBet(e)
-            console.log(bet)
-            setActive(e)
+        const newBet = e === "Loss" ? "Lose" : e;
+        setBet(newBet);
+        setActive(newBet);
+        console.log(newBet);
     }
+    
  
 
 
@@ -39,12 +41,17 @@ export default function SelectBet(props) {
 
 
         <div className='flex items-center justify-center h-[50px] min-w-[300px] w-[auto] p-2 txet-[13px] '>
-        {sportOptionArray.map((names) => (  /* add actual betting option list or arrays here*/               
-        <span key={Math.random()} className={names != isActive ? styles.betSelect : styles.active} onClick={()=> handlebetSelection(names) && setActive(names)}>
+    {sportOptionArray.map((names, index) => (  /* add actual betting option list or arrays here*/               
+        <span
+            key={index} // Add the key prop here
+            className={names !== isActive ? styles.betSelect : styles.active}
+            onClick={() => handlebetSelection(names) && setActive(names)}
+        >
             {names}
         </span>
-        ))} 
-        </div>
+    ))}
+</div>
+
 
         <div className='h-[50px] min-w-[200px] w-[auto] flex  items-center capitalize p-2 text-[11px]'>
             {/* user name / amount / selection  */}
