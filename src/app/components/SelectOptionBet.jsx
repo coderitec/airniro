@@ -1,24 +1,48 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import styles from '../styles/betmain.module.css'
+import styles from '../styles/betselectionmain.module.css'
 
 
-export default function SelectSportBet(props) {
+export default function SelectOptiontBet(props) {
 
-    const sportOptionArray = ["Win","Draw", "Loss"]
+    const categoryOptionArray = [
+        {
+        mainName: "Made in Lagos",
+        name: "Wizkid"
+        },
+        {
+        mainName: "Timeless",
+        name: "Davido"
+        },
+        {
+        mainName: "Body & Soul",
+        name: "Joeboy"
+        },
+        {
+        mainName: "Work Of Art",
+        name: "Asake"
+        },
+        {
+        mainName: "Thy Kingdom Come",
+        name: "Seyi Vibes"
+        },
+    ]
 
     const [bet, setBet] = useState("...")
     const [isActive, setActive] = useState()
+
+    const betSelection = props.categoryOption[props.categoryOption.findIndex((item)=> item.mainName == bet)]
+    console.log(betSelection)
 
     useEffect(
         () => {
             setBet(bet)
             console.log(bet)
-        },[bet]
+        },{bet}
     )
 
     const handlebetSelection = (e) => {
-            e == "Loss"? setBet("Lose"):setBet(e)
+            setBet(e)
             console.log(bet)
             setActive(e)
     }
@@ -27,47 +51,29 @@ export default function SelectSportBet(props) {
 
 
   return (
-    <section id='bet_main' className='h-[80px] w-[100%] flex flex-col items-center justify-center bg-[green]'>
-        <div>
-            {/* props title  */}
-            <p className='text-[13px]'>{`Best Album of the year 2023 (Tueday 22 August, 2023)`}</p>
+    <section id='bet_main' className='min-h-[150px] h-[auto] w-[100%] flex flex-col items-center justify-center m-2 '>
+
+        {/* props title  */}
+        <p className=' w-[100%] text-[13px] text-left'>{`${props.subtitle} ( ${props.date} )`}</p>
+        
+
+
+        <div className={isActive ? `h-[50px] min-w-[100%] w-[auto] flex  items-center capitalize text-[11px] transition-all` : `hidden transition-all`}>
+            <p className={``}> <span className='text-[#0166E5]'>{`Adebola James `}</span>{`Bet Adebola James Bet ${betSelection?betSelection.name:''} Album ${betSelection?betSelection.mainName:''} to Win the best Album of the year at the Headies award 2023 With N20,000`}
+            </p>          
         </div>
 
-        <div>
-            {/* props title  */}
-            <p className='text-[13px]'>{`Adebola James Bet Wiskid Albu \‘Made in Lagos\’ to Win the best Album of the year at the Headies awrad 2023 With N20,000`}</p>
-        </div> 
-
-        <div>
-            {/* props title  */}
-            <p className='text-[13px]'>{`Best Album of the year 2023 (Tueday 22 August, 2023)`}</p>
-        </div>
-        
-        
-        
-        <div className='h-[50px] min-w-[100px] w-[auto]  items-center justify-around grid grid-cols-betgrid_3 text-right gap-1'>
-            {/* club name  */}
-            <p>{ props.club ? props.club :`Chelsea`}</p>
-
-            {/* club scores  */}
-            <p>0</p>
-
-        </div>
-
-
-        <div className='flex items-center justify-center h-[50px] min-w-[300px] w-[auto] p-2 txet-[13px] '>
-        {sportOptionArray.map((names) => (  /* add actual betting option list or arrays here*/               
-        <span className={names != isActive ? styles.betSelect : styles.active} onClick={()=> handlebetSelection(names) && setActive(names)}>
-            {names}
+        <div className='h-[80px] w-[100%] flex items-center justify-center min-w-[300px] text-[13px] capitalize text-left my-[0.2rem]'>
+        {props.categoryOption.map((i, key) => (  /* add actual betting option list or arrays here*/               
+        <span key={key} className={i.mainName != isActive ? styles.betSelect : styles.active } onClick={()=> handlebetSelection(i.mainName) && setActive(i.mainName)}>
+            <p className='text-[13px] font-[600] w-[100%]'>{i.mainName}</p>
+            <p className='text-[11px] w-[100%]'>{i.name}</p>
         </span>
         ))} 
         </div>
 
-        <div className='h-[50px] min-w-[200px] w-[auto] flex  items-center capitalize p-2 text-[11px]'>
-            {/* user name / amount / selection  */}
-            <p className={isActive ? `` : `hidden` }> <span className='text-[#0166E5]'>{`Adebola James `}</span>{`Bet ${props.club} To ${bet} with N20,000 `}</p>          
 
-        </div>
+        <p className={`w-[100%] text-left text-[11px] flex items-center capitalize `}> {`Bet against `} <span className='text-[#0166E5] text-left'>{` Adebola James `}</span> {` with N20,000 to win extra N20,000`}</p>          
     </section>
   )
 }

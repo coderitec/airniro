@@ -29,7 +29,7 @@ export default function Nav() {
 
   return (
     <div>
-    <nav className='h-[80px] w-[100vw] p-1 px-6 flex items-center justify-between bg-[#00132E] relative top-0 left-0 text-[14px]'>
+    <nav className='h-[80px] w-[100%] p-1 px-6 flex items-center justify-between bg-[#00132E] relative top-0 left-0 text-[14px]'>
         <Logo/>
 
         <nav className='h-[auto] w-[400px] flex items-center justify-around'>
@@ -58,7 +58,7 @@ export default function Nav() {
 
 
     </nav>
-        <div className={isActive ? `absolute h-[70px] w-[100vw] bg-[#0166E5] flex items-center text-[white] p-1 px-6 text-[13px]` : `hidden`}>
+        <div className={isActive ? `absolute h-[70px] w-[100%] bg-[#0166E5] flex items-center text-[white] p-1 px-6 text-[13px]` : `hidden`}>
         {navLinks.map((e) => (isActive == e.link ? e.nestedLink.map((e) => (
             <a href='#' className='mx-5' key={e}>
                 <p>{e}</p>

@@ -7,14 +7,14 @@ import { IoIosAddCircleOutline } from 'react-icons/io';
 import BetSlip from '../components/BetSlip';
 
 export default function BetMain(props) {
+ 
   const sportArray = [
     'Football',
-    'Volley Ball',
-    'Basket Ball',
-    'Tennis',
-    'Long Tennis',
-    'Cricket',
-    'Boxing',
+    'Premier League',
+    'La Liga',
+    'Serie A',
+    'Bundesliga',
+    'League 1',
   ];
 
   const propstitle = 'Sport';
@@ -56,34 +56,59 @@ export default function BetMain(props) {
         </p>
       </section>
 
+      {props.currentDate ? (
       <section className="min-h-[50px] w-[100%] p-4 bg-[#ffffff] border-t border-t-[#dfdede]">
         <p className="h-[100%] w-[100%] flex items-center text-[14px]">
           {props.currentDate}
           {/**props.currentDate */}
         </p>
-      </section>
+      </section>): null}
 
+      
       <main className="h-[auto] w-[100%] relative flex flex-col items-center bg-[#ffffff]">
-        <BetSlip
+      {props.id == 1? (<>
+      <BetSlip
+          id={props.id}
           title={props.title}
           club={['Chealsea', 'Liverpool']}
           time={'18:00'}
         />
         <BetSlip
+          id={props.id}
           title={props.title}
           club={['Everton', 'Aston Villa']}
           time={'20:00'}
         />
         <BetSlip
+          id={props.id}
           title={props.title}
           club={['AC Millan', 'Napoli']}
           time={'22:00'}
         />
         <BetSlip
+          id={props.id}
           title={props.title}
           club={['Sevilla', 'Barcelona']}
           time={'22:00'}
         />
+        </>):(<>
+        <BetSlip
+        id={props.id}
+        title={props.title}
+        subtitle={props.heading}
+        date={props.date}
+        time={props.time}
+        categoryOption = {props.categoryOption}
+        />
+        <BetSlip
+        id={props.id}
+        title={props.title}
+        subtitle={props.heading}
+        date={props.date}
+        time={props.time}
+        categoryOption = {props.categoryOption}
+        />
+        </>)}
       </main>
 
       <style>

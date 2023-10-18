@@ -27,8 +27,8 @@ export default function SelectSportBet(props) {
 
 
   return (
-    <section id='bet_main' className='h-[50px] w-[100%] items-center justify-center grid  grid-cols-betgrid_2'>
-        <div className='h-[50px] min-w-[100px] w-[auto]  items-center justify-around grid grid-cols-betgrid_3 text-right gap-1'>
+    <section id='bet_main' className='h-[50px] w-[100%] grid grid-cols-betgrid_2 gap-0'>
+        <div className='h-[50px] min-w-[100px] w-[auto] items-center justify-around grid grid-cols-betgrid_3 text-right gap-2'>
             {/* club name  */}
             <p>{ props.club ? props.club :`Chelsea`}</p>
 
@@ -38,7 +38,7 @@ export default function SelectSportBet(props) {
         </div>
 
 
-        <div className='flex items-center justify-center h-[50px] min-w-[300px] w-[auto] p-2 txet-[13px] '>
+        <div className='h-[50px] w-[auto] flex items-center justify-center min-w-[300px] p-1 text-[13px] '>
         {sportOptionArray.map((names) => (  /* add actual betting option list or arrays here*/               
         <span className={names != isActive ? styles.betSelect : styles.active} onClick={()=> handlebetSelection(names) && setActive(names)}>
             {names}
