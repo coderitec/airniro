@@ -16,7 +16,11 @@ module.exports = {
         'betgrid_main': '250px minmax(700px, 1fr) 300px',
         'betgrid_1': '70px minmax(300px, 1fr)',
         'betgrid_2': '0.5fr 2fr 2fr',
-        'betgrid_3': 'minmax(40px, 1fr) 10px',
+        'betgrid_2_r': '1fr 1fr 1fr',
+        'betgrid_3': 'minmax(50px, 1fr) 10px',
+      },
+      gridTemplateRows: {
+        'betgrid_2_r': '1fr 1fr 1fr',
       },
     },
   },

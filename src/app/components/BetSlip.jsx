@@ -30,8 +30,7 @@ export default function BetSlip(props) {
           {/* betting teams*/}
         {props.id == 1 ? (
           <>
-          <SelectSportBet club={props.club[0]} />
-          <SelectSportBet club={props.club[1]} />
+          <SelectSportBet club={[props.club[0], props.club[1]]}/>
           </>
           ):(
           <>
