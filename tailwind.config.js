@@ -13,10 +13,14 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       gridTemplateColumns: {
-        'betgrid_main': '250px minmax(300px, 1fr) 250px',
-        'betgrid_1': '100px minmax(300px, 1fr)',
-        'betgrid_2': '1fr 2fr 2fr',
-        'betgrid_3': 'minmax(90px, 2fr) 1fr',
+        'betgrid_main': '250px minmax(700px, 1fr) 300px',
+        'betgrid_1': '70px minmax(300px, 1fr)',
+        'betgrid_2': '0.5fr 2fr 2fr',
+        'betgrid_2_r': '1fr 1fr 1fr',
+        'betgrid_3': 'minmax(50px, 1fr) 10px',
+      },
+      gridTemplateRows: {
+        'betgrid_2_r': '1fr 1fr 1fr',
       },
     },
   },

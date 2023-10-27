@@ -3,6 +3,8 @@ import Link from 'next/link'
 import CancelButton from '../components/CancelButton'
 import { Montserrat } from 'next/font/google'
 import { useState } from 'react'
+import Group from './Group/page'
+import Single from './Single/page'
 
 
 const poppins = Montserrat({ subsets: ['latin'], weight: ['400']})
@@ -13,7 +15,7 @@ const poppins = Montserrat({ subsets: ['latin'], weight: ['400']})
 //   keywords: "entertainment, sport, live style"
 // }
 
-export default function BetSliptLayout({ children }) {
+export default function BetSliptLayout() {
 
     const [active, setActive] = useState('single')
 
@@ -23,27 +25,37 @@ export default function BetSliptLayout({ children }) {
     // const router  = useRouter
     // const link = router
   return (
-    <div className=' h-[300px] min-h-[300px] w-[270px] rounded-xl mx-[auto] bg-[#ff0000] relative'>
+    <div className='min-h-[300px] h-[auto] w-[100%] rounded-xl mx-[auto] bg-[#ffffff] relative'>
         <div className='h-[60px] w-[100%] rounded-t-xl bg-[#00132E] text-[white] flex items-center px-4'>
             Bet Slip
         </div>
-        <nav className='h-[70px] w-[100%] flex items-center rounded-t-3xl bg-[#78777734]'>
-            <Link href={'/Register/Signup'} onClick={() => handleclick('single')} className={`h-[100%] w-[50%] rounded-tl-3xl hover:bg-[#5353532d] hover:cursor-pointer ${active == 'single'? `border-b-2 border-[#FFC717]`:``}`}>
+        <main className='bg-[white]'>
+        <nav className='h-[50px] w-[100%] flex items-center text-[13px] border-b-[0.6px] border-[#78777734]'>
+            <p onClick={() => handleclick('single')} className={`h-[100%] w-[50%] hover:bg-[#5353532d] hover:cursor-pointer ${active == 'single'? `border-b-2 border-[#FFC717]`:``}`}>
             <aside className='h-[100%] w-[100%] rounded-tl-3xl flex justify-center items-end p-2'>
                 <p className='text-center'> Single </p>
             </aside>
-            </Link>
+            </p>
 
-            <Link href={'/Register/Login'} onClick={() => handleclick('multiple')} className={`h-[100%] w-[50%] rounded-tr-3xl hover:bg-[#5353532d] hover:cursor-pointer ${active == 'multiple'? `border-b-2 border-[#FFC717]`:``}`}>
+            <p onClick={() => handleclick('multiple')} className={`h-[100%] w-[50%] hover:bg-[#5353532d] hover:cursor-pointer ${active == 'multiple'? `border-b-2 border-[#FFC717]`:``}`}>
             <aside className='h-[100%] w-[100%] rounded-tr-3xl flex justify-center items-end p-2'>
-                <p className=' text-center'>Multiple</p>
+                <p className=' text-center'>Group</p>
             </aside>
-            </Link>
+            </p>
         </nav>
 
-        <div>
-            {children}
-        </div>
+        {active == "single"? (
+            <section>
+                <Single/>
+            </section>
+        ): (
+            <section>
+                <Group/>
+            </section>
+        )}
+        
+
+        </main>
 
     </div>
   

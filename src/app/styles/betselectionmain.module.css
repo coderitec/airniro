@@ -1,11 +1,11 @@
-/* Selector for active and betSelect classes */
 .betSelect,
 .active {
-    min-height: 30px;
+    min-height: 60px;
     min-width: 80px;
-    width: 90px;
+    width: auto;
     padding-left: 8px;
     padding-right: 8px;
+    padding: 5px;
     margin-left: 1.5px;
     margin-right: 1.5px;
     background-color: #0166E5;
@@ -17,21 +17,12 @@
     transition: all 350ms ease-in-out;
     cursor: pointer;
 
-    border-radius: 4px;
 }
 
-.active:first-child{
+.active{
     background-color: #FFC717;
 }
-.active{
-    background-color: #14AFF5;
-    color: black
-}
-.active:last-child{
-    background-color: #00132E;
-    color: #FFC717;
-}
-/* .betSelect:first-child{
+.betSelect:first-child{
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     margin-right: 1.5px;
@@ -40,7 +31,7 @@
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     margin-left: 1.5px;
-} */
+}
 .betSelect:hover{
     background-color: #55617695;
     transition: all 350ms ease-in-out;
