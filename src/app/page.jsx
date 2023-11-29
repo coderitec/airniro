@@ -9,6 +9,11 @@ export default function Home() {
         <Link href='/HomePage'>
         <li>Home</li>
         </Link>
+
+        <Link href='/UserProfile'>
+        <li>UserProfile</li>
+        </Link>
+
         <Link href='/CreateAccount'>
         <li>create account</li>
         </Link>

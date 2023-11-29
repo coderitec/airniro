@@ -60,8 +60,8 @@ export default function SelectSportBet(props) {
 
 
         <div className='h-[130px] w-[auto] grid grid-rows-betgrid_2_r  min-w-[150px] items-center justify-center text-[13px] font-[650]'>
-        {sportOptionArray.map((names) => (  /* add actual betting option list or arrays here*/               
-        <span className={names != sportOptionArray[isActive] ? styles.betSelect : styles.active} onClick={()=> handlebetSelection(names) && setActive(sportOptionArray.indexOf(names))}>
+        {sportOptionArray.map((names, index) => (  /* add actual betting option list or arrays here*/               
+        <span key={index} className={names != sportOptionArray[isActive] ? styles.betSelect : styles.active} onClick={()=> handlebetSelection(names) && setActive(sportOptionArray.indexOf(names))}>
             {names}
         </span>
         ))} 
