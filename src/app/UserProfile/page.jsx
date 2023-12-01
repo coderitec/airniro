@@ -7,7 +7,7 @@ import { MdOutlineVerifiedUser, MdCameraAlt } from "react-icons/md"
 import ProfileListItems from './components/ProfileListItems'
 import Profiler from './components/Profiler'
 
-export default function page() {
+export default function Page() {
 
     const [firstName, setFirstName] = useState('Benson')
     const [lastName, setLastName] = useState('Chukwudi')

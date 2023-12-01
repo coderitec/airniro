@@ -1,4 +1,4 @@
-
+import styles from './styles/home.module.css'
 import HomePage from './HomePage/page'
 import Link from 'next/link'
 
