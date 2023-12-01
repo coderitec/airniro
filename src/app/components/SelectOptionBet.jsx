@@ -39,7 +39,9 @@ export default function SelectOptiontBet(props) {
     // ...
     
     // Ensure that props.categoryOption is initialized with a default value
-    const categoryOption = props.categoryOption || [];
+    const categoryOption = props.categoryOption ?? [];
+
+
     
     console.log(betSelection)
 
@@ -56,7 +58,10 @@ export default function SelectOptiontBet(props) {
             setActive(e)
     }
  
-
+    if (!categoryOption.length) {
+        // Render a loading state or handle the absence of data
+        return <p>Loading...</p>;
+      }
 
 
   return (
