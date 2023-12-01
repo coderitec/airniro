@@ -7,6 +7,7 @@ import { IoIosAddCircleOutline } from 'react-icons/io';
 import BetSlip from '../components/BetSlip';
 
 export default function BetMain(props) {
+  const [isNavActive, setNavActive] = useState('');
  
   const sportArray = [
     'Football',
@@ -19,7 +20,6 @@ export default function BetMain(props) {
 
   const propstitle = 'Sport';
 
-  const [isNavActive, setNavActive] = useState('');
 
   return (
     <div className="h-[auto] w-[100%] rounded-2xl flex flex-col bg-[#d6d6d6] mx-[auto] my-[2rem]">
