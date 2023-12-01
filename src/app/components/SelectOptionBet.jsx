@@ -32,6 +32,8 @@ export default function SelectOptiontBet(props) {
     const [isActive, setActive] = useState()
 
     // const betSelection = props.categoryOption[props.categoryOption.findIndex((item)=> item.mainName == bet)]
+    const betSelectionIndex = props.categoryOption.findIndex((item) => item.mainName === bet);
+
     const betSelection = betSelectionIndex !== -1 ? props.categoryOption[betSelectionIndex] : null;
 
     console.log(betSelection)
