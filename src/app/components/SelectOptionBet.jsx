@@ -32,10 +32,15 @@ export default function SelectOptiontBet(props) {
     const [isActive, setActive] = useState()
 
     // const betSelection = props.categoryOption[props.categoryOption.findIndex((item)=> item.mainName == bet)]
-    const betSelectionIndex = props.categoryOption.findIndex((item) => item.mainName === bet);
+    const betSelectionIndex = props.categoryOption?.findIndex((item) => item.mainName === bet);
 
-    const betSelection = betSelectionIndex !== -1 ? props.categoryOption[betSelectionIndex] : null;
-
+    const betSelection = betSelectionIndex !== -1 ? props.categoryOption?.[betSelectionIndex] : null;
+    
+    // ...
+    
+    // Ensure that props.categoryOption is initialized with a default value
+    const categoryOption = props.categoryOption || [];
+    
     console.log(betSelection)
 
     useEffect(
