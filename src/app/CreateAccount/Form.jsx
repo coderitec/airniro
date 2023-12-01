@@ -30,16 +30,16 @@ export default function Form() {
             <li>
                 <label htmlFor="pwd">Create Password</label>
                 <div className='h-[auto] w-[100%] relative my-2'>
-                <input type={inputType} name="" id="" placeholder='' className='placeholder:text-gray-500 text-sm placeholder:p-8 p-8 border border-gray-500 rounded-md w-[100%] h-[44px]  outline-none relative'/>
+                <input type={inputType} name="" id="" placeholder='' className='placeholder:text-gray-500 text-sm placeholder:p-8 p-8 border border-gray-500 rounded-md w-[100%] h-[44px]  outline-none relative mb-0'/>
         
-                <span className='h-[100%] w-[80px] absolute top-0 right-0 flex items-center justify-center z-[3]'>
-                <span className='h-[25px] w-[59px] rounded-md text-[12px] bg-[#0168e534] text-[#0166E5] flex items-center justify-center hover:cursor-pointer'
+                <span className='h-[100%] w-[80px] absolute top-0 right-0 flex items-center justify-center z-[3] mb-0'>
+                <span className='h-[25px] w-[59px] rounded-md text-[12px] bg-[#0168e534] text-[#0166E5] flex items-center justify-center hover:cursor-pointer mb-0'
                 onClick={handleclick}>
                 {clicked? `Hide`: `Show`}
                 </span>
                 </span>
                 </div>
-                <span className='text-[10px]'>Maximum of 8 characters, one uppercase and one special character</span>
+                <span className='text-[10px] mt-0'>Maximum of 8 characters, one uppercase and one special character</span>
             </li>
             <li>
                 <label htmlFor="dateOfBirth">Date Of Birth</label>

@@ -30,7 +30,7 @@ export default function BetMain(props) {
 
         <nav className='min-h-[60px] w-[100%] flex items-center justify-around bg-[#0166E5] text-[white]'>
               {/**props.navlist  an array for nav items  */}
-            {props.navlist.map((names, index) => (                     
+            {sportArray.map((names, index) => (                     
                 <span key={index} className={isNavActive === names ? `h-[100%] w-[auto] flex items-center justify-around cursor-pointer text-[13px] text-[#FFC717]`:`h-[100%] w-[auto] flex items-center justify-around cursor-pointer text-[13px]`} onClick={() => setNavActive(names)}>
                     {names}
                 </span>
